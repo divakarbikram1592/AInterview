@@ -20,6 +20,7 @@ class ComplexWords:
             # If word not found in dictionary, return -1
             return -1
 
+
     def is_complex(self, word, threshold=2):
         """
         Check if a word is complex based on the number of syllables.

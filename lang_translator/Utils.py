@@ -9,6 +9,7 @@ import regex as reg
 from lang_translator.TranslatorLibrary import TranslatorLibrary
 
 
+
 class Utils:
 
     @staticmethod

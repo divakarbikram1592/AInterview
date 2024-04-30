@@ -5,6 +5,7 @@ LiHiSTO
 regex
 flask
 
+
 beautifulsoup4
 requests
 pypdf2

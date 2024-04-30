@@ -54,7 +54,6 @@ class NativeLangTranslatorMain:
 
             self.final_translated_txt = self.final_translated_txt + hi_text
 
-        # print(final_translated_txt)
         return self.final_translated_txt
 
 
