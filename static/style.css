@@ -1,0 +1,79 @@
+body {
+  background-color: #fbf0d9; /* Light beige background, similar to paper */
+  color: #362c2b; /* Soft black color for text */
+  font-family: 'Georgia', serif; /* Font similar to those used in e-readers */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reader {
+  width: 60%;
+  height: 80%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  padding: 10px;
+  background: #f0f0f0;
+  text-align: right;
+}
+
+.content {
+  padding: 20px;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+.night {
+  background-color: #333;
+  color: #ccc;
+}
+
+.night button {
+  color: #ccc;
+  background-color: #555;
+}
+
+/* Font options */
+.reader.serif {
+  font-family: 'Georgia', serif;
+}
+
+.reader.sans-serif {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Theme options */
+.reader.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.reader.sepia {
+  background-color: #f4ecd8;
+  color: #472400;
+}
+
+.reader.dark {
+  background-color: #333;
+  color: #ccc;
+}
+
+button:focus, a:focus {
+  outline: 2px solid #005fcc; /* Blue outline for better visibility */
+  outline-offset: 2px;
+}

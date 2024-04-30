@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A4 Sheet with Margins</title>
+  <!-- Include Font Awesome library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0; /* Change this to the desired background color */
+      text-align: center; /* Center align the content */
+      font-family: Arial, sans-serif; /* Default font family */
+      position: relative; /* Necessary for button positioning */
+    }
+    .container {
+      margin-top: 5%; /* Adjust top margin as needed */
+    }
+    .sheet {
+      width: 80%; /* Make sheet width dynamic */
+      max-width: 210mm; /* Limit maximum width to A4 size */
+      height: 297mm; /* A4 height */
+      margin: 5mm auto; /* Center align the sheet */
+      background-color: white; /* Change this to the desired background color */
+      border: 1px solid #ccc; /* Optional: Add border for visual reference */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add elevation effect */
+      padding: 20px; /* Add padding to the sheet content */
+      box-sizing: border-box; /* Include padding in the total width */
+      overflow: auto; /* Enable scrolling if content exceeds sheet size */
+    }
+    /* Custom styles for the input */
+.textbox {
+  width: 80%; /* Set the width of the input */
+  max-width: 210mm; /* Limit maximum width to A4 size */
+  height: 210mm; /* Set the height of the input */
+  padding: 10px; /* Add padding inside the input */
+  font-size: 16px; /* Set the font size */
+  border-radius: 5px; /* Add rounded corners */
+  border: 2px solid #ccc; /* Add a border */
+}
+
+/* Custom styles for the placeholder text */
+.textbox::placeholder {
+  color: #999; /* Set the color of the placeholder text */
+}
+
+/* Custom styles for when the input is focused */
+.textbox:focus {
+  border-color: #66afe9; /* Change border color when focused */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Custom styles for when the input is invalid */
+.textbox:invalid {
+  border-color: #ff0000; /* Change border color when invalid */
+}
+
+    .title {
+      font-size: 24px;
+      margin-bottom: 5px; /* Adjust bottom margin as needed */
+      font-family: 'Times New Roman', Times, serif; /* Title font */
+    }
+    .subtitle {
+      font-size: 18px;
+      color: #666; /* Optional: Adjust text color as needed */
+      font-family: 'Arial Black', Gadget, sans-serif; /* Subtitle font */
+    }
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff; /* Button background color */
+      color: white; /* Button text color */
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add elevation effect */
+    }
+    .floating-button i {
+      font-size: 24px;
+      line-height: 50px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="title">Native Reader</div>
+  <div class="subtitle">अपनी भाषा में पढ़ाई करें WITH <STRIKE>NO COMPLEX</STRIKE> HINDI</div>
+</div>
+<form  method="post" action=" {{ url_for('.translate') }}">
+  <textarea name="htmlContent" class="textbox" placeholder="Write or paste text here..." required></textarea>
+
+<button class="floating-button">
+  <i class="fas fa-chevron-right"></i>
+</button>
+  </form>
+
+<!-- Link to external JavaScript file -->
+
+
+
+
+<!--<script>-->
+<!--  document.querySelector('.floating-button').addEventListener('click', function() {-->
+<!--    // Data to send-->
+<!--    var dataToSend = { content: document.querySelector('.sheet').innerHTML };-->
+<!--    console.log("dataToSend: ", dataToSend);-->
+
+<!--    // Create a fetch request to send data-->
+<!--    fetch('/success', {-->
+<!--        method: 'POST',-->
+<!--        headers: {-->
+<!--            'Content-Type': 'application/xml', // Corrected content type-->
+<!--        },-->
+<!--        body: JSON.stringify(dataToSend)-->
+<!--    })-->
+<!--    .then(response => {-->
+<!--        if (response.ok) {-->
+<!--            return response; // Assuming the server responds with JSON-->
+<!--        } else {-->
+<!--            throw new Error('Network response was not ok.');-->
+<!--        }-->
+<!--    })-->
+<!--    .then(data => {-->
+<!--        // Redirect to the next page if needed or handle response-->
+<!--        window.location.href = data.url; // Ensure your server sends back a URL in JSON response-->
+<!--    })-->
+<!--    .catch(error => {-->
+<!--        console.error('Error:', error);-->
+<!--        alert('Failed to send data: ' + error.message); // User feedback-->
+<!--    });-->
+<!--});-->
+<!--</script>-->
+
+
+
+
+
+</body>
+</html>

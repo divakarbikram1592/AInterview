@@ -1,0 +1,10 @@
+numpy
+nltk
+googletrans==4.0.0-rc1
+LiHiSTO
+regex
+flask
+
+beautifulsoup4
+requests
+pypdf2

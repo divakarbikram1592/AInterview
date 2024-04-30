@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kindle-Like Reader</title>
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<div class="reader">
+  <div class="toolbar">
+    <div>
+      <button onclick="decreaseFontSize()">A-</button>
+      <button onclick="increaseFontSize()">A+</button>
+      <button onclick="toggleNightMode()">Night Mode</button>
+<!--      <button onclick="changeFont()">Font</button>-->
+<!--      <button onclick="changeTheme()">Theme</button>-->
+      <button onclick="speakText()">Speak</button>
+      <button onclick="stopSpeaking()">Stop</button>
+    </div>
+    <div class="toolbar">
+      <label for="languageSelection">Choose Language:</label>
+      <select id="languageSelection" onchange="filterVoicesByLanguage()">
+        <!-- Options will be populated dynamically -->
+      </select>
+
+      <label for="voiceSelection">Choose Voice:</label>
+      <select id="voiceSelection" onchange="updateVoice()">
+        <!-- Options will be populated by JavaScript -->
+      </select>
+
+    </div>
+
+  </div>
+  <div class="content">
+<!--    <p>-->
+<!--        Modi was born and raised in Vadnagar in northeastern Gujarat, where he completed his secondary education. He was introduced to the RSS at the age of eight. His account of helping his father sell tea at the Vadnagar railway station has not been reliably corroborated. At age 18, he was married to Jashodaben Modi, whom he abandoned soon after, only publicly acknowledging her four decades later when legally required to do so. Modi became a full-time worker for the RSS in Gujarat in 1971. The RSS assigned him to the BJP in 1985 and he held several positions within the party hierarchy until 2001, rising to the rank of general secretary.-->
+<!--    </p>-->
+     <p>
+         {{ data }}
+    </p>
+
+    <!-- Add more paragraphs as needed -->
+  </div>
+</div>
+<script src="../static/script.js"></script>
+</body>
+</html>
